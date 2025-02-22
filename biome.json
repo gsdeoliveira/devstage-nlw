@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": []
+		"ignore": ["node_modules"]
 	},
 	"formatter": {
 		"enabled": true,
@@ -21,12 +21,20 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"correctness": {
+				"noUnusedImports": "warn"
+			},
+			"style": {
+				"useSelfClosingElements": "info"
+			}
 		}
 	},
 	"javascript": {
 		"formatter": {
 			"quoteStyle": "single",
+			"jsxQuoteStyle": "double",
+			"arrowParentheses": "asNeeded",
 			"trailingCommas": "es5",
 			"semicolons": "asNeeded"
 		}
